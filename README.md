@@ -9,7 +9,7 @@ A gradle plugin to provide consistent versioning of dependencies across disparat
 ```groovy
 buildscript {
   dependencies {
-    classpath "com.trusona.android:trusona-build-plugin:0.0.1"
+    classpath "com.trusona.plugins:trusona-build-plugin:0.0.1"
   }
 }
 ```
@@ -17,7 +17,7 @@ buildscript {
 - Second, apply the plugin to your project module:
 
 ```groovy
-apply plugin: "com.trusona.android.build-plugin"
+apply plugin: "com.trusona.plugins.build-plugin"
 ```
 
 - Third, update your dependencies. 
@@ -33,7 +33,7 @@ With the plugin, it would be modified to this:
 compile "org.slf4j:slf4j-api:${trusona.version('slf4j')}"
 ````
 
-- To see the [list](https://github.com/lighthauz/trusona-build-plugin/blob/master/src/main/resources/com/trusona/android/gradle/build/trusona-versions.properties)
+- To see the [list](https://github.com/lighthauz/trusona-build-plugin/blob/master/src/main/resources/com/trusona/plugins/gradle/build/trusona-versions.properties)
 of supported dependencies `short-codes` and version values, dump the output with:
 
 ```groovy
