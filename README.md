@@ -1,4 +1,4 @@
-# Trusona-Build-Plugin
+# Trusona Build Plugin
 
 A simple plugin to provide consistent versioning of dependencies across all Trusona's java and android projects.
 
