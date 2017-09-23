@@ -21,22 +21,32 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  *
- */
+*/
 
-package com.trusona.android.gradle.build
+package com.trusona.plugins.gradle.build.tasks
 
-import com.trusona.android.gradle.build.tasks.TrusonaBuildTask
-import org.gradle.api.Plugin
-import org.gradle.api.Project
+import groovy.json.JsonOutput
+import org.gradle.api.DefaultTask
 
-class TrusonaPlugin implements Plugin<Project> {
+class TrusonaBuildTask extends DefaultTask {
+    def resource = "com/trusona/plugins/gradle/build/trusona-versions.properties"
+    def map = [:]
 
-    @Override
-    void apply(Project project) {
-        try {
-            project.tasks.create("trusona", TrusonaBuildTask)
-        } catch (MissingMethodException e) {
-            throw new RuntimeException("you need a newer version of gradle", e)
-        }
+    TrusonaBuildTask() {
+        def properties = new Properties()
+        properties.load(TrusonaBuildTask.class.classLoader.getResourceAsStream(resource))
+        map.putAll(properties)
+    }
+
+    def version(def key) {
+        map."${key}"
+    }
+
+    def versions() {
+        Collections.unmodifiableMap map
+    }
+
+    def versionsAsJson() {
+        JsonOutput.prettyPrint(JsonOutput.toJson(map))
     }
 }
