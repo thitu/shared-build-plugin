@@ -1,0 +1,33 @@
+artifactory {
+    contextUrl = CONTEXT_REPO_ROOT
+    publish {
+        repository {
+            repoKey = currentBranch.call() == "release" ? "sdk-releases-local" : "sdk-snapshots-local"
+            username = System.getenv("artifactory_username")?.trim() ?: trusonaUsername
+            password = System.getenv("artifactory_password")?.trim() ?: trusonaPassword
+            maven = true
+        }
+        defaults {
+            publications("mavenJava")
+            publishArtifacts = true
+            publishPom = true
+            publishIvy = false
+        }
+    }
+    resolve {
+        repository {
+            repoKey = currentBranch.call() == "release" ? "sdk-releases-local" : "sdk-snapshots-local"
+            username = System.getenv("artifactory_username")?.trim() ?: trusonaUsername
+            password = System.getenv("artifactory_password")?.trim() ?: trusonaPassword
+            maven = true
+        }
+    }
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}
