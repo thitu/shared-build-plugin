@@ -1,5 +1,6 @@
 package com.trusona.android.gradle.build.tasks
 
+import groovy.json.JsonOutput
 import org.gradle.api.DefaultTask
 
 class TrusonaBuildTask extends DefaultTask {
@@ -18,5 +19,9 @@ class TrusonaBuildTask extends DefaultTask {
 
     def versions() {
         Collections.unmodifiableMap map
+    }
+
+    def versionsAsJson() {
+        JsonOutput.toJson map
     }
 }
