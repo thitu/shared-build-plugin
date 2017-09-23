@@ -47,6 +47,6 @@ class TrusonaBuildTask extends DefaultTask {
     }
 
     def versionsAsJson() {
-        JsonOutput.toJson map
+        JsonOutput.prettyPrint(JsonOutput.toJson(map))
     }
 }
