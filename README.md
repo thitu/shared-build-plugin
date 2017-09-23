@@ -4,7 +4,7 @@ A gradle plugin to provide consistent versioning of dependencies across disparat
 
 ## Usage
 
-- First, in your project's top level buildscript block, add the plugin's classpath as a dependency:
+- First, in your project's top level `buildscript` block, add the plugin's classpath as a dependency:
 
 ```groovy
 buildscript {
@@ -40,4 +40,23 @@ of supported dependencies `short-codes` and version values, dump the output with
 println trusona.versionsAsJson()
 ```
 
+Here is the current list of shortcodes and the corresponding versions:
 
+```json
+{
+	"securesharedpreferences": "1.2.0",
+	"ok-http": "3.9.0",
+	"android-support": "26.1.0",
+	"slf4j": "1.7.25",
+	"jackson": "2.8.9",
+	"calligraphy": "2.3.0",
+	"groovy": "2.4.11",
+	"guava8": "23.0",
+	"guava7": "20.0",
+	"dagger": "2.11",
+	"play-services": "11.4.0",
+	"rx-android": "1.2.1",
+	"rx-java": "1.3.0",
+	"conceal": "1.1.3"
+}
+```
