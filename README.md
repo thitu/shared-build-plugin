@@ -40,7 +40,7 @@ of supported dependencies `short-codes` and version values, dump the output with
 println trusona.versionsAsJson()
 ```
 
-### `Shortcodes` and the corresponding versions:
+### Current `short-codes` and the corresponding `versions`:
 
 ```json
 {
