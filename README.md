@@ -40,11 +40,11 @@ of supported dependencies `short-codes` and version values, dump the output with
 println trusona.versionsAsJson()
 ```
 
-Here is the current list of shortcodes and the corresponding versions:
+### Json output of shortcodes and the corresponding versions:
 
 ```json
 {
-	"securesharedpreferences": "1.2.0",
+  "securesharedpreferences": "1.2.0",
 	"ok-http": "3.9.0",
 	"android-support": "26.1.0",
 	"slf4j": "1.7.25",
