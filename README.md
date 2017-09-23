@@ -1,6 +1,6 @@
 # Trusona Build Plugin
 
-A simple plugin to provide consistent versioning of dependencies across all Trusona's java and android projects.
+A gradle plugin to provide consistent versioning of dependencies across disparate java and android projects.
 
 ## Usage
 
