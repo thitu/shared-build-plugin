@@ -1,4 +1,10 @@
 allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+        mavenLocal()
+    }
+
     ext.executeCmd = { cmd ->
         def process = cmd.execute()
         def output = new ByteArrayOutputStream()
