@@ -1,3 +1,5 @@
+#!/bin/bash
+
 branch=$1
 event=$2
 

@@ -1,5 +1,6 @@
 artifactory {
-    contextUrl = CONTEXT_REPO_ROOT
+    contextUrl = System.getenv("CONTEXT_REPO_ROOT") ?: CONTEXT_REPO_ROOT
+
     publish {
         repository {
             repoKey = currentBranch.call() == "release" ? "sdk-releases-local" : "sdk-snapshots-local"

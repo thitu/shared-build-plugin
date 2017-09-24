@@ -1,0 +1,20 @@
+branches:
+  only:
+    - master
+    - release
+
+filter_secrets: false
+
+language: java
+install: false
+
+script:
+  ./gradlew clean build
+
+deploy:
+  provider: script
+  skip_cleanup: true
+  on:
+    all_branches: true
+  script:
+    ./sbin/ci-publisher.sh $TRAVIS_BRANCH $TRAVIS_EVENT_TYPE
