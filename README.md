@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/lighthauz/trusona-build-plugin.svg?branch=release)](https://travis-ci.org/lighthauz/trusona-build-plugin)
+
 # Trusona Build Plugin
 
 A gradle plugin to provide consistent versioning of dependencies across disparate Java and Android projects.
