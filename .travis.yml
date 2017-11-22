@@ -12,7 +12,7 @@ install: skip
 dist: precise
 
 before_script:
-  - ./sbin/ci/trusona-env.sh
+  - ./sbin/trusona-env.sh
 
 script:
   - ./gradlew clean build
