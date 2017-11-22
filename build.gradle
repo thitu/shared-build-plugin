@@ -2,6 +2,7 @@ buildscript {
     apply from: "init.gradle"
 
     repositories {
+        google()
         jcenter()
         mavenCentral()
     }
@@ -20,7 +21,7 @@ apply plugin: "com.jfrog.artifactory"
 apply from: "artifactory.gradle"
 
 group = "com.trusona.plugins"
-version = "0.0.6"
+version = "3.2.6"
 
 targetCompatibility = JavaVersion.VERSION_1_7
 sourceCompatibility = JavaVersion.VERSION_1_7

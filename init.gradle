@@ -22,6 +22,6 @@ allprojects {
     }
 
     ext.repoUrl = {
-        currentBranch.call() == "release" ? (System.getenv("RELEASES_REPO") ?: RELEASES_REPO) : (System.getenv("SNAPSHOTS_REPO") ?: SNAPSHOTS_REPO)
+        currentBranch.call() == "release" ? RELEASES_REPO : SNAPSHOTS_REPO
     }
 }

@@ -1,11 +1,11 @@
 artifactory {
-    contextUrl = System.getenv("CONTEXT_REPO_ROOT") ?: CONTEXT_REPO_ROOT
+    contextUrl = CONTEXT_REPO_ROOT
 
     publish {
         repository {
             repoKey = currentBranch.call() == "release" ? "sdk-releases-local" : "sdk-snapshots-local"
-            username = System.getenv("artifactory_username")?.trim() ?: trusonaUsername
-            password = System.getenv("artifactory_password")?.trim() ?: trusonaPassword
+            username = trusonaUsername
+            password = trusonaPassword
             maven = true
         }
         defaults {
@@ -18,8 +18,8 @@ artifactory {
     resolve {
         repository {
             repoKey = currentBranch.call() == "release" ? "sdk-releases-local" : "sdk-snapshots-local"
-            username = System.getenv("artifactory_username")?.trim() ?: trusonaUsername
-            password = System.getenv("artifactory_password")?.trim() ?: trusonaPassword
+            username = trusonaUsername
+            password = trusonaPassword
             maven = true
         }
     }
