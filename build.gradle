@@ -20,13 +20,13 @@ apply plugin: "com.jfrog.artifactory"
 apply from: "artifactory.gradle"
 
 group = "com.trusona.plugins"
-version = "0.0.5"
+version = "0.0.6"
 
 targetCompatibility = JavaVersion.VERSION_1_7
 sourceCompatibility = JavaVersion.VERSION_1_7
 
 dependencies {
     compile gradleApi()
-    compile "org.codehaus.groovy:groovy-all:2.4.11"
+    compile "org.codehaus.groovy:groovy-all:2.4.12"
     testCompile "org.spockframework:spock-core:1.1-groovy-2.4"
 }
