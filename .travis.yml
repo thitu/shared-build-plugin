@@ -11,8 +11,11 @@ sudo: required
 install: skip
 dist: precise
 
+before_script:
+  - ./sbin/ci/trusona-env.sh
+
 script:
-  ./gradlew clean build
+  - ./gradlew clean build
 
 deploy:
   provider: script
