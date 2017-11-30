@@ -3,7 +3,7 @@ artifactory {
 
     publish {
         repository {
-            repoKey = currentBranch.call() == "release" ? "sdk-releases-local" : "sdk-snapshots-local"
+            repoKey = currentBranch.call().startsWith("release") ? "sdk-releases-local" : "sdk-snapshots-local"
             username = trusonaUsername
             password = trusonaPassword
             maven = true
@@ -17,7 +17,7 @@ artifactory {
     }
     resolve {
         repository {
-            repoKey = currentBranch.call() == "release" ? "sdk-releases-local" : "sdk-snapshots-local"
+            repoKey = currentBranch.call().startsWith("release") ? "sdk-releases-local" : "sdk-snapshots-local"
             username = trusonaUsername
             password = trusonaPassword
             maven = true
