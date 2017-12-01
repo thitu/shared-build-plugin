@@ -1,3 +1,3 @@
 #!/bin/bash
 
-clear;./gradlew build install artifactoryPublish
+clear;./gradlew clean build install artifactoryPublish
