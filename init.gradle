@@ -22,6 +22,6 @@ allprojects {
     }
 
     ext.repoUrl = {
-        currentBranch.call() == "release" ? RELEASES_REPO : SNAPSHOTS_REPO
+        currentBranch.call().startsWith("release") ? RELEASES_REPO : SNAPSHOTS_REPO
     }
 }
