@@ -11,7 +11,7 @@ A gradle plugin to provide consistent versioning of dependencies across disparat
 ```groovy
 buildscript {
   dependencies {
-    classpath "com.trusona.plugins:trusona-build-plugin:0.0.1"
+    classpath "com.trusona.plugins:trusona-build-plugin:4.0.0"
   }
 }
 ```
