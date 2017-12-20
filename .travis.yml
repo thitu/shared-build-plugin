@@ -1,9 +1,7 @@
 branches:
   only:
-    - master
-    - release
-    - /^master-.*$/
-    - /^release-.*$/
+    - /^master.*$/
+    - /^release.*$/
 
 language: java
 
