@@ -21,7 +21,7 @@ apply plugin: "com.jfrog.artifactory"
 apply from: "artifactory.gradle"
 
 group = "com.trusona.plugins"
-version = "4.0.0"
+version = "4.1.0"
 
 targetCompatibility = JavaVersion.VERSION_1_7
 sourceCompatibility = JavaVersion.VERSION_1_7
