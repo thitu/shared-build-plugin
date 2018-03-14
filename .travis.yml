@@ -9,7 +9,6 @@ filter_secrets: false
 jdk: oraclejdk8
 sudo: required
 install: skip
-dist: precise
 
 before_script:
   - ./sbin/trusona-env.sh
