@@ -16,7 +16,7 @@ class VersionsSpec extends Specification {
         versions.versions()
 
         and:
-        versions.versions().size() == 23
+        versions.versions().size() == 26
     }
 
     def "be able to retrive versions as JSON"() {
