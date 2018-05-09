@@ -33,7 +33,7 @@ With the plugin, it would be modified to this:
 compile "org.slf4j:slf4j-api:${trusona.version('slf4j')}"
 ````
 
-- To see the [list](https://github.com/lighthauz/trusona-build-plugin/blob/master/src/main/resources/com/trusona/plugins/gradle/build/trusona-versions.properties)
+- To see the [list](https://github.com/thitu/shared-build-plugin/blob/master/src/main/resources/com/trusona/plugins/gradle/build/internal/trusona-versions.properties)
 of supported dependencies `short-codes` and version values, dump the output with:
 
 ```groovy
